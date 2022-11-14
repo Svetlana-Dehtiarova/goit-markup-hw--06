@@ -57,11 +57,53 @@
           <button type="button" class="primary-button" data-modal-open>Замовити послугу</button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
+            <div class="wrap">
           <button data-modal-close class="button-close" type="button">
             <svg class="icon icon-close" width="11" height="11">
               <use href="./images/sprite.svg#svg-close"></use>
             </svg>
             </button>
+            </div>
+          <form class="modal-form" name="modal-form">
+            <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
+            <label class="form-label" for="name">Ім'я</label>
+            <div class="input-wrap">
+              <input class="modal-input name" type="text" name="name" id="name" required>
+              <svg class="icon icon-name" width="18" height="18">
+                <use href="./images/sprite.svg#modal-person"></use>
+              </svg>
+            </div>
+            <label class="form-label" for="tel">Телефон</label>
+            <div class="input-wrap">
+              <input class="modal-input tel" type='tel' name="tel" id="tel" required>
+              <svg class="icon icon-tel" width="18" height="18">
+                <use href="./images/sprite.svg#modal-phone"></use>
+              </svg>
+            </div>
+            <label class="form-label" for="email">Пошта</label>
+            <div class="input-wrap">
+              <input class="modal-input email" type="email" name="email" id="email" required>
+              <svg class="icon icon-email" width="18" height="18">
+                <use href="./images/sprite.svg#modal-email"></use>
+              </svg>
+            </div>
+            <div class="input-wrap">
+              <label class="form-label" for="form-text">Коментар</label>
+              <textarea class="modal-input form__text" id="form-text" placeholder="Введіть текст"></textarea>
+            </div>
+          
+          
+            <label class="form-field-checkbox">
+              <input class="checkbox" type="checkbox" name="topic" value="check">
+              <span class="checkbox-text">
+                Погоджуюся з розсилкою та приймаю
+                <a href="" class="checkbox-link">Умови договору</a>
+              </span>
+            </label>
+          
+            <button class="button-send">Відправити</button>
+          
+          </form>
           </div>
         </div>
         </div>
