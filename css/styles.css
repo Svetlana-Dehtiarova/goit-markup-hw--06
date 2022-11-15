@@ -29,6 +29,7 @@ background: #2F303A;*/
   --cubic: cubic-bezier(0.42, 0, 0.58, 1);
   --portfolio-card-color: rgba(33, 150, 243, 0.9);
   --background-buttom-color: #188ce8;
+  --border-input: rgba(255, 255, 255, 0.3);
 }
 
 /*-----------*/
@@ -166,6 +167,7 @@ a {
   line-height: 1.14;
   display: flex;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts.list .phone:focus,
 .contacts.list .phone:hover,
@@ -228,8 +230,8 @@ a {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 5;
-    transform: translate(-50%, -50%);
-    padding: 40px 39px 40px 41px;
+  transform: translate(-50%, -50%);
+  padding: 40px 39px 40px 41px;
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -240,19 +242,18 @@ a {
   transform: translate(-50%, -50%) scale(1.1);
 }
 .modal .button-close {
-position: absolute;
+  position: absolute;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
+  padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-bt-color);
   border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: inline-flex;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .wrap {
   width: 100%;
@@ -265,66 +266,66 @@ position: absolute;
 }
 
 .form-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-    margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-bottom: 12px;
 }
 
 .form-label {
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: var(--primary-text-color);
-   display: block;
-   text-align: left;
-   margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
 }
 
 .input-wrap {
-    position: relative;
-    margin-bottom: 10px; 
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .input-wrap:last-of-type {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .modal-form .icon {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    fill: var(--title-text-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 
 .modal-input:focus + .icon {
-    fill: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .modal-input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    border-radius: 4px;
-    padding-left: 42px;
-    outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus {
-    border-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .order .input-wrap:not(:last-child) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .button-send {
   display: inline-block;
@@ -342,75 +343,75 @@ position: absolute;
 }
 
 .form__text {
-    display: block;
-    height: 130px;
-    resize: none;
-    padding: 12px 16px;
-    color: rgba(117, 117, 117, 0.5);
+  display: block;
+  height: 130px;
+  resize: none;
+  padding: 12px 16px;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .checkbox-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
 }
 
 .checkbox-container {
-    position: relative;
-    width: 16px;
-    height: 15px;
-    margin-right: 8.38px;
-    fill: var(--main-lite-color);
+  position: relative;
+  width: 16px;
+  height: 15px;
+  margin-right: 8.38px;
+  fill: var(--main-lite-color);
 }
 
 .form__checkbox {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 7;
 }
 
 .checkbox-wrap {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border: 2px solid var(--title-text-color);
-    border-radius: 3px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--title-text-color);
+  border-radius: 3px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-Vector {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    fill: inherit;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  fill: inherit;
 }
 
-.form__checkbox:checked~.checkbox-wrap {
-    background-color: var(--accent-color);
+.form__checkbox:checked ~ .checkbox-wrap {
+  background-color: var(--accent-color);
 }
 
 .checkbox__text {
-    font-size:14px;
-    line-height: 1.71;
-    letter-spacing:0.03em;
-    color: var(--primary-text-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
 .checkbox__text-blue {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .form__btn {
-    width: 200px;
+  width: 200px;
 }
 .form-field-checkbox {
   display: flex;
@@ -427,8 +428,10 @@ position: absolute;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
   background-size: 0;
-  transition: background-size 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-position 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-position 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox:checked {
   border-color: var(--accent-color);
@@ -849,4 +852,76 @@ block:hover {
 .footer-social-link {
   color: var(--main-lite-color);
   background-color: rgba(255, 255, 255, 0.1);
+}
+.subscribe__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  color: var(--main-lite-color);
+  border-radius: 4px;
+  margin-left: 12px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+.subscribe {
+  margin-left: auto;
+}
+.subscribe__title {
+  color: var(--main-lite-color);
+  font-weight: 700;
+  line-height: 1.14;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.subscribe__input {
+  width: 358px;
+  height: 50px;
+  background-color: var(--footer-background-color);
+  border: 1px solid var(--border-input);
+  border-radius: 4px;
+  padding: 15px 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+.subscribe__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  color: var(--main-lite-color);
+  border-radius: 4px;
+  margin-left: 12px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+.subscribe__button--icon::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/icon-send.svg);
+  background-size: contain;
+  margin-left: 10px;
+}
+
+.button-div {
+  display: flex;
+  align-items: center;
+}
+
+.svg-send__icon-send {
+  fill: var(--main-lite-color);
+  margin-left: 10px;
 }
