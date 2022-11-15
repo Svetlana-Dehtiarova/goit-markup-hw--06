@@ -350,20 +350,6 @@ a {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
-}
-
-.checkbox-container {
-  position: relative;
-  width: 16px;
-  height: 15px;
-  margin-right: 8.38px;
-  fill: var(--main-lite-color);
-}
 
 .form__checkbox {
   position: absolute;
@@ -386,15 +372,6 @@ a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-Vector {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  fill: inherit;
-}
-
 .form__checkbox:checked ~ .checkbox-wrap {
   background-color: var(--accent-color);
 }
@@ -410,9 +387,6 @@ a {
   color: var(--accent-color);
 }
 
-.form__btn {
-  width: 200px;
-}
 .form-field-checkbox {
   display: flex;
   align-items: center;
